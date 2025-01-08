@@ -44,7 +44,7 @@ describe('Order Controller', () => {
       await getOrder({}, res);
 
       expect(res.status).toHaveBeenCalledWith(500);
-      expect(res.json).toHaveBeenCalledWith({ error: 'Veritabanı hatası' });
+      expect(res.json).toHaveBeenCalledWith({ error: 'Database error' });
     });
   });
 
@@ -64,7 +64,7 @@ describe('Order Controller', () => {
       await getOrderComment({}, res);
 
       expect(res.status).toHaveBeenCalledWith(500);
-      expect(res.json).toHaveBeenCalledWith({ error: 'Veritabanı hatası' });
+      expect(res.json).toHaveBeenCalledWith({ error: 'Database error' });
     });
   });
 });
